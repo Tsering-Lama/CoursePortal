@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Search</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="images/baruch2.0logo.png" alt="Baruch College Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Course Search</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder="Search for courses...">
+    </div>
+
+    <ul id="courseList">
+        <li><a href="course_details.html">CIS 2300</a></li>
+        <li><a href="course_details.html">CIS 3400</a></li>
+        <li><a href="course_details.html">CIS 4400</a></li>
+        <li><a href="course_details.html">CIS 5800</a></li>
+        <li><a href="course_details.html">ANT 1001</a></li>
+        <li><a href="course_details.html">ANT 4400</a></li>
+        <li><a href="course_details.html">ECON 2000</a></li>
+        <li><a href="course_details.html">SOC 3300</a></li>
+        <!-- Add more courses here -->
+    </ul>
+</main>
+
+<footer>
+    <p>&copy; 2024 Online Course Portal</p>
+</footer>
+
+
+<script>
+    function searchCourses() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("courseList");
+        li = ul.getElementsByTagName('li');
+    
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
+
+

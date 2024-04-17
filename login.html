@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<header>
+    <h1>Login to Online Course Portal</h1>
+</header>
+
+<form action="login.php" method="POST">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+
+    <input type="submit" value="Login">
+    <select id="role" name="role" required>
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+    </select><br>
+</form>
+
+<footer>
+    <p>&copy; 2024 Online Course Portal</p>
+</footer>
+
+</body>
+</html>

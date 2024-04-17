@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Register for Online Course Portal</h1>
+</header>
+
+<form action="register.php" method="POST">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="role">Role:</label><br>
+    <select id="role" name="role" required>
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+    </select><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<footer>
+    <p>&copy; 2024 Online Course Portal</p>
+</footer>
+
+</body>
+</html>
